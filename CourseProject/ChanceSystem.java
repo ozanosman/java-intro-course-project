@@ -1,5 +1,5 @@
 /**
- * Клас съдържащ метод за квадратчето "Chance".
+ * Клас съдържащ методи за квадратчето "Chance".
  *
  * @author Озан Осман
  */
@@ -47,36 +47,6 @@ public class ChanceSystem extends Player
 
         if (randomNumber < 40)
         {
-            player.chocolateCoins -=50;
-        }
-
-        if (randomNumber > 39 && randomNumber < 66)
-        {
-            player.chocolateCoins -=100;
-        }
-
-        if (randomNumber > 65 && randomNumber < 80)
-        {
-            player.chocolateCoins -=150;
-        }
-
-        if (randomNumber > 79 && randomNumber < 95)
-        {
-            player.chocolateCoins -=200;
-        }
-
-        if (randomNumber > 94)
-        {
-            player.chocolateCoins -=250;
-        }
-    }
-
-    private static void chancePickerNegative(Player player)
-    {
-        int randomNumber = random.nextInt(101) + 1;
-
-        if (randomNumber < 40)
-        {
             player.chocolateCoins +=50;
         }
 
@@ -98,6 +68,36 @@ public class ChanceSystem extends Player
         if (randomNumber > 94)
         {
             player.chocolateCoins +=250;
+        }
+    }
+
+    private static void chancePickerNegative(Player player)
+    {
+        int randomNumber = random.nextInt(101) + 1;
+
+        if (randomNumber < 40)
+        {
+            player.chocolateCoins -=50;
+        }
+
+        if (randomNumber > 39 && randomNumber < 66)
+        {
+            player.chocolateCoins -=100;
+        }
+
+        if (randomNumber > 65 && randomNumber < 80)
+        {
+            player.chocolateCoins -=150;
+        }
+
+        if (randomNumber > 79 && randomNumber < 95)
+        {
+            player.chocolateCoins -=200;
+        }
+
+        if (randomNumber > 94)
+        {
+            player.chocolateCoins -=250;
         }
     }
 }
